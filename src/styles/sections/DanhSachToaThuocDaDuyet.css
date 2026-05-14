@@ -1,0 +1,52 @@
+.danh-sach {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-sm);
+  background: var(--color-bg-app);
+}
+
+.danh-sach__table-wrapper {
+  flex: 1;
+  overflow: auto;
+  background: white;
+}
+
+.danh-sach__row:nth-child(even) td {
+  background: var(--color-row-alt);
+}
+
+.danh-sach__row:hover td {
+  background: var(--color-row-hover) !important;
+}
+
+.danh-sach__address-cell {
+  max-width: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.danh-sach__cancel-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--color-text-danger);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1;
+  padding: 0 4px;
+}
+
+.danh-sach__cancel-btn:hover {
+  color: #ff2020;
+}
+
+.danh-sach__footer {
+  border-top: 1px solid #c0c0c0;
+  padding: 3px 8px;
+  background: #e8e8e8;
+  font-size: var(--font-size-xs);
+  color: #444;
+  text-align: right;
+}

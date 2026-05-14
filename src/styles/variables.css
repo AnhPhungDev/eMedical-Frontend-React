@@ -1,0 +1,48 @@
+:root {
+  /* Brand / accent */
+  --color-bar-bg-start: #d4e6f7;
+  --color-bar-bg-end: #b8d4ee;
+  --color-bar-border: #8fb5d8;
+
+  --color-section-title-bg-start: #d8e7f5;
+  --color-section-title-bg-end: #bcd5ec;
+  --color-section-title-text: #1a4d80;
+  --color-section-title-border: #94b6d4;
+
+  --color-th-bg-start: #eaf1f8;
+  --color-th-bg-end: #d6e2ee;
+  --color-th-text: #2c4a6b;
+  --color-th-border: #a8bdd2;
+
+  --color-row-alt: #f4f8fc;
+  --color-row-hover: #d5e7f8;
+  --color-row-selected: #b9d6f2;
+
+  --color-text-default: #1f1f1f;
+  --color-text-muted: #555;
+  --color-text-danger: #c40000;
+  --color-text-accent: #0a7a8a;
+  --color-text-link: #1a5fa8;
+
+  --color-bg-panel: #ffffff;
+  --color-bg-app: #ebeef2;
+  --color-bg-toolbar: linear-gradient(to bottom, #e8f1fa, #cfe1f1);
+
+  --color-border-soft: #d8dde3;
+  --color-border-strong: #aab4bf;
+
+  /* Buttons */
+  --btn-bg-start: #f6f6f6;
+  --btn-bg-end: #e2e2e2;
+  --btn-bg-hover-start: #e5eeff;
+  --btn-bg-hover-end: #ccd8f5;
+  --btn-border: #adadad;
+  --btn-border-hover: #7090cc;
+
+  /* Typography */
+  --font-family-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-md: 13px;
+  --font-size-lg: 14px;
+}

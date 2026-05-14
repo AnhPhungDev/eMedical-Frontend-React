@@ -1,0 +1,276 @@
+.cap-phat {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-sm);
+  background: var(--color-bg-app);
+}
+
+.cap-phat__toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 8px;
+  background: var(--color-bg-toolbar);
+  border-bottom: 1px solid var(--color-bar-border);
+  flex-wrap: wrap;
+}
+
+.cap-phat__radio-group {
+  display: flex;
+  gap: 15px;
+  margin-left: 8px;
+  align-items: center;
+}
+
+.cap-phat__radio {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+}
+
+.cap-phat__body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* Left panel — patient list */
+.cap-phat__left {
+  width: 340px;
+  min-width: 280px;
+  border-right: 1px solid var(--color-border-strong);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: white;
+}
+
+.cap-phat__search-bar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 6px;
+  border-bottom: 1px solid var(--color-border-soft);
+  background: #f4f7fb;
+}
+
+.cap-phat__table-wrapper {
+  flex: 1;
+  overflow: auto;
+}
+
+.cap-phat__patient-row {
+  cursor: pointer;
+}
+
+.cap-phat__patient-row:hover td {
+  background: var(--color-row-hover) !important;
+}
+
+.cap-phat__patient-row--selected td {
+  background: var(--color-row-selected) !important;
+}
+
+.cap-phat__dispense-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 20px;
+  background: #5c8fcc;
+  border-radius: 3px;
+  cursor: pointer;
+  color: white;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.cap-phat__dispense-icon:hover {
+  background: #3d72b5;
+}
+
+.cap-phat__status-bar {
+  border-top: 1px solid var(--color-border-strong);
+  padding: 2px 8px;
+  background: #e8e8e8;
+  font-size: var(--font-size-xs);
+  color: #444;
+}
+
+/* Right panel — patient details + prescription */
+.cap-phat__right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: white;
+  padding-top: 0;
+}
+
+.cap-phat__section-title {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+  font-weight: bold;
+  margin: 0;
+  padding: 3px 10px;
+  color: var(--color-section-title-text);
+  font-weight: 700;
+  font-size: var(--font-size-md);
+  border-top: 1px solid var(--color-section-title-border);
+  border-bottom: 1px solid var(--color-section-title-border);
+}
+
+.cap-phat__patient-info {
+  padding: 2px 10px;
+  border-bottom: 1px solid var(--color-border-soft);
+  background: #f7fbff;
+  margin-top: 0;
+}
+
+.cap-phat__info-grid {
+  display: grid;
+  grid-template-columns: 92px 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 4px 12px;
+  align-items: start;
+}
+
+/* Avatar: cột 1, hàng 1 */
+.cap-phat__avatar {
+  grid-column: 1;
+  grid-row: 1;
+  width: 80px;
+  height: 100px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.cap-phat__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Hai cột thông tin: cột 2-3, span cả 2 hàng */
+.cap-phat__info-grid > .cap-phat__info-col:nth-child(3) {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+.cap-phat__info-grid > .cap-phat__info-col:nth-child(4) {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+}
+
+.cap-phat__info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.cap-phat__info-row {
+  display: flex;
+  align-items: baseline;
+  font-size: var(--font-size-sm);
+}
+
+.cap-phat__info-label {
+  color: var(--color-text-muted);
+  min-width: 88px;
+  display: inline-block;
+  font-size: var(--font-size-sm);
+}
+
+.cap-phat__info-value {
+  font-size: var(--font-size-sm);
+}
+
+.cap-phat__info-value--bold {
+  font-weight: 700;
+}
+
+.cap-phat__bhyt {
+  grid-column: 1;   /* cùng cột với avatar */
+  grid-row: 2;      /* hàng 2, ngay dưới avatar */
+  color: var(--color-text-danger);
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.cap-phat__presc-wrapper {
+  flex: 1;
+  overflow: auto;
+}
+
+.cap-phat__presc-row {
+  cursor: pointer;
+}
+
+.cap-phat__presc-row:hover td {
+  background: var(--color-row-hover) !important;
+}
+
+.cap-phat__presc-row--selected td {
+  background: var(--color-row-selected) !important;
+}
+
+.cap-phat__footer {
+  border-top: 1px solid var(--color-border-soft);
+  padding: 5px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f4f7fb;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-accent);
+  font-weight: 600;
+}
+
+.cap-phat__footer-total {
+  font-weight: 700;
+  padding-right: 60px;
+  color: var(--color-text-accent);
+}
+
+.cap-phat__action-bar {
+  border-top: 1px solid var(--color-bar-border);
+  padding: 4px 10px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  background: var(--color-bg-toolbar);
+  justify-content: flex-start;
+  flex-shrink: 0;
+}
+
+.cap-phat__action-spacer {
+  flex: 1;
+}
+
+.cap-phat__btn-print {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cap-phat__btn-cancel {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cap-phat__a5-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}

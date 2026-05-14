@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-md);
+  background-color: var(--color-bg-app);
+  color: var(--color-text-default);
+}
+
+button {
+  font-family: inherit;
+}
+
+input[type='text'],
+input[type='search'] {
+  outline: none;
+}
+
+input[type='text']:focus,
+input[type='search']:focus {
+  border-color: #5a8fd8 !important;
+  box-shadow: 0 0 0 1px #a0c0f0;
+}
+
+/* App shell */
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--color-bg-app);
+}
+
+.app-shell__content {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.app-shell__placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 18px;
+  color: #666;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b0b0b0;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+/* Common form controls used across sections */
+.field-input {
+  border: 1px solid var(--btn-border);
+  padding: 2px 4px;
+  font-size: var(--font-size-sm);
+  font-family: inherit;
+  width: 92px;
+  background: white;
+}
+
+.field-input--flex {
+  width: auto;
+  flex: 1;
+}
+
+/* Date input — rộng hơn để hiện đủ ngày + icon lịch */
+.field-input--date {
+  width: 122px;
+  cursor: pointer;
+}
+
+.label-inline {
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+}
+
+/* Common table styles */
+.data-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.data-table th {
+  background: linear-gradient(to bottom, var(--color-th-bg-start), var(--color-th-bg-end));
+  color: var(--color-th-text);
+  padding: 5px 8px;
+  border: 1px solid var(--color-th-border);
+  font-weight: 600;
+  text-align: left;
+  white-space: nowrap;
+  font-size: var(--font-size-sm);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.data-table th.center {
+  text-align: center;
+  padding: 5px 6px;
+}
+
+.data-table td {
+  padding: 3px 8px;
+  border: 1px solid var(--color-border-soft);
+  white-space: nowrap;
+  font-size: var(--font-size-sm);
+}
+
+.data-table td.center {
+  text-align: center;
+  padding: 3px 6px;
+}
+
+.data-table td.right {
+  text-align: right;
+}
